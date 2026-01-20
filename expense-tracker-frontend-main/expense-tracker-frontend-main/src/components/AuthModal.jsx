@@ -13,8 +13,8 @@ export default function AuthModal({ onClose, setToken }) {
     setError("");
 
     const url = isLogin
-      ? "http://localhost:5000/api/auth/login"
-      : "http://localhost:5000/api/auth/register";
+      ? "https://experience-u2rf.onrender.com/api/auth/login"
+      : "https://experience-u2rf.onrender.com/api/auth/register";
 
     const payload = isLogin
       ? { email: form.email, password: form.password }
