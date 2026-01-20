@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: "https://experience-u2rf.onrender.com/api",
 });
 
 API.interceptors.request.use((req) => {
@@ -19,7 +19,7 @@ export const addExpense = (data) => API.post("/expenses", data);
 export const getMonthlyReport = async (month, year) => {
   const token = localStorage.getItem("token");
   const res = await fetch(
-    `http://localhost:5000/api/reports/monthly?month=${month}&year=${year}`,
+    `https://experience-u2rf.onrender.com/api/reports/monthly?month=${month}&year=${year}`,
     {
       headers: {
         Authorization: `Bearer ${token}`,
